@@ -1,4 +1,6 @@
 #!/usr/bin/python
+#
+# https://wikidocs.net/71
 
 chulsu = [90, 85, 70]
 yonghee = [88, 79, 92]
