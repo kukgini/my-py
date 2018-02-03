@@ -1,16 +1,20 @@
+#!/usr/bin/python
+#
+# https://wikidocs.net/73
+
 def prg2com(inlist, coms):
     outlist = []
-    sumout = []
+    outsum = []
     for x in range(coms):
         outlist.append([])
-        sumout.append(0)
+        outsum.append(0)
     
     inlist.sort(reverse=True)
 
     for bread in inlist:
-        lowbasket = sumout.index(min(sumout))
+        lowbasket = outsum.index(min(outsum))
         outlist[lowbasket].append(bread)
-        sumout[lowbasket] += bread
+        outsum[lowbasket] += bread
     return outlist
 
 def main():
