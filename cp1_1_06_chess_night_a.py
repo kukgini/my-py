@@ -13,13 +13,10 @@ def solution(pos):
     moves = [(2,1),(1,2),(-1,2),(-2,1),(-2,-1),(-1,-2),(1,2),(2,-1)]
     answer = 0
     for move in moves:
-        posr = move[0]
-        posc = move[1]
-
+        posr, posc = move[0], move[1]
         if posr >= 0 and posr < 8 and posc >= 0 and posc < 8:
             print(f'night can move to : {posr:2d}, {posc:2d}')
             answer += 1
-
     return answer
 
 if __name__  == "__main__":
