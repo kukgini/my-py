@@ -15,9 +15,11 @@ def solution(pos):
     for move in moves:
         posr = move[0]
         posc = move[1]
-        print(f'night can move to : {posr:2d}, {posc:2d}')
+
         if posr >= 0 and posr < 8 and posc >= 0 and posc < 8:
+            print(f'night can move to : {posr:2d}, {posc:2d}')
             answer += 1
+
     return answer
 
 if __name__  == "__main__":
