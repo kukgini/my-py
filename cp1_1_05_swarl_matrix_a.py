@@ -1,6 +1,9 @@
 # n 소용돌이 수, 대각선의 합
 def print_matrix(matrix):
-    for row in matrix: print(row)
+    for row in matrix:
+        for val in row:
+            print(f'{val:2d}', end=' ')
+        print()
 
 def make_matrix(n):
     m = [[0] * n for _ in range(n)]
