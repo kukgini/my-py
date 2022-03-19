@@ -25,7 +25,7 @@ def solution(n):
             num += 1
             matrix[row][col] = num
         dir = (dir + 1) % 4 # 0,1,2,3 % 4개 방향으로 진행 방향을 바꾼다.
-        if divmod(dir,2)[1]: # 2로 나누어 떨어지지 않으면 홀수
+        if divmod(dir,2)[1]: # 2로 나누어 떨어지지 않으면 홀수, dir % 2 해도 됨
             distance -= 1 # col, row 를 한번씩 진행 했으면 1 step 줄인다.
     print_matrix(matrix)
     answer = 0
