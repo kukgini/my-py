@@ -10,9 +10,9 @@ def create_words(level, s):
 
 def solution(word):
     global words
-    words = []
     answer = 0
     create_words(0, '')
+
     for index, i in enumerate(words):
         if word == i:
             answer = index
