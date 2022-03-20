@@ -10,14 +10,14 @@ def code_to_pos(code):
     y = int(code[1]) - 1        # board 의 좌표가 0 부터 시작하므로 1다 을 뺀다.
     return (y, x)
 
-def walk(board, position, direction):
-    print(f'walk in {position}')
+def move(board, position, direction):
+    print(f'move to {position}')
     if 0 <= position[0] < 8 and 0 <= position[1] < 8:
         board[position[0]][position[1]] = 0
         next = (position[0] + direction[0], position[1] + direction[1])
-        walk(board, next, direction)
+        move(board, next, direction)
     else:
-        print('end of walk')
+        print('end of move')
 
 def make_board(n):
     board = [[1]*n for _ in range(8)]
@@ -33,12 +33,12 @@ def solution(bishops):
     for bishop in bishops:
         print(f'bishop={bishop}')
         for direction in directions:
-            walk(board, code_to_pos(bishop), direction)
+            move(board, code_to_pos(bishop), direction)
     print_board(board)
     return sum([sum(x) for x in board])
 
 if __name__ == "__main__":
     bishops = ["D5","E8","G2"]
-    print(f'input={bishops}, solution={solution(bishops)}')
+    print(f'bishops={bishops}, answer={solution(bishops)}')
     bishops = ["D5"]
-    print(f'input={bishops}, solution={solution(bishops)}')
+    print(f'bishops={bishops}, answer={solution(bishops)}')
