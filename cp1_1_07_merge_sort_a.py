@@ -1,22 +1,14 @@
 def solution(a,b):
-    a_index = 0
-    b_index = 0
-    a_size = len(a)
-    b_size = len(b)
     answer = []
-    while a_index < a_size and b_index < b_size:
-        if (a[a_index] < b[b_index]):
-            answer.append(a[a_index])
-            a_index += 1
+    while len(a) > 0 and len(b) > 0:
+        if a[0] <= b[0]:
+            answer.append(a.pop(0))
         else:
-            answer.append(b[b_index])
-            b_index += 1
-    while a_index < a_size:
-        answer.append(a[a_index])
-        a_index += 1
-    while b_index < b_size:
-        answer.append(b[b_index])
-        b_index += 1
+            answer.append(b.pop(0))
+    while len(a) > 0:
+        answer.append(a.pop(0))
+    while len(b) > 0:
+        answer.append(b.pop(0))
     return answer
 
 if __name__ == "__main__":
